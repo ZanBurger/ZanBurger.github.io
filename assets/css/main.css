@@ -72,6 +72,78 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Social Buttons */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-buttons .button {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.minibutton {
+	margin-right: 20px;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    background-color: #1b1f22;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2d89ef;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+#projects {
+    width: 90% !important; /* You can set this to whatever width you like */
+    max-width: 1500px !important; /* Optional, to ensure it doesn't get too wide on large screens */
+    margin: 0 auto !important; /* To center the content */
+}
+
+#projects article {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.projects-grid .project img {
+    max-width: 300px; /* You can adjust this value */
+    height: auto;
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.soon {
+	text-align: center;
+}
+#soon {
+	font-size: 400px;
+}
+
+
 /* Basic */
 
 	@-ms-viewport {
