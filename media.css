@@ -1,0 +1,84 @@
+/* Media Queries */
+
+@media (max-width: 600px) {
+    /* Home Page */
+    .header {
+        font-size: 1.1em;
+        width: 22em;
+        text-align: center;
+    }
+    .header p {
+        font-size: 2em;
+        border-right: 1px solid var(--misc-color);
+    }
+    .header nav a {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+    .header nav span {
+        display: none;
+    }
+
+    #about:target,
+    #journey:target,
+    #projects:target,
+    #contact:target {
+        width: 25em;
+    }
+
+    /* About Section */
+    #about:target {
+        flex-direction: column;
+    }
+
+    #about img {
+        margin-top: 3em;
+        width: 20em;
+        height: auto;
+    }
+
+    /* Journey Section */
+    .flexbox-full {
+        flex-direction: column;
+        font-size: 0.8em;
+    }
+
+    .icons {
+        row-gap: 15em;
+    }
+
+    .info-box box-icon {
+        position: absolute;
+        right: calc(100% + 3em);
+        top: 3em;
+        padding-right: 0.5em;
+    }
+    
+
+    /* Projects Section */
+    .project-group {
+        grid-template-columns: repeat(1, minmax(20em, 1fr));
+    }
+
+    /* Contact Section */
+    .contact-content {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    
+    .input-fields {
+        display: block;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-field {
+        margin-bottom: 1em;
+    }
+
+
+}

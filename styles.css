@@ -1,0 +1,351 @@
+:root {
+    --bg-color: #19181a;
+    --sec-color: #8c8697;
+    --temp-color: #f9ebff;
+    --text-color: #00c9a3;
+    --misc-color: #8525cf;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Adjust as needed */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to {border-color: transparent}
+    50% {border-color: var(--misc-color); }
+}
+
+/* Basic styles */
+
+body {
+    color:var(--temp-color);
+    font-family: "Source Code Pro";
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/nightanimated.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 2em;
+    margin-top: 0px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 96%;               
+    background-color:#505050;
+    height: 1px;
+}
+
+.backarrow {
+    width: 25px;
+    border-right: 1px white solid;
+    border-bottom: 1px white solid;
+    border-radius: 5px;
+    fill: var(--temp-color);
+    align-self: flex-start;
+}
+
+.backarrow:hover {
+    fill: var(--misc-color);
+    cursor: pointer;
+}
+
+#about:not(:target),
+#journey:not(:target),
+#contact:not(:target),
+#projects:not(:target) {
+    display: none;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+    animation: slideUp 2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    border: var(--sec-color) 1px solid;
+}
+
+/* Home Page */
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border: var(--sec-color) 1px solid;
+    font-size: 1.5em;
+    padding: 2%;   
+}
+
+.header p {
+    font-size: 2em;
+    overflow: hidden;
+    letter-spacing: .15em;
+    border-right: 3px solid var(--misc-color);
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+.header nav a:hover {
+    color: var(--misc-color);
+}
+ 
+/* About Section */
+
+#about:target {
+    display: flex;
+    margin: 10%;
+    animation: slideUp 2s ease-in-out;
+}
+
+.textContent {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border: var(--sec-color) 1px solid;
+    padding: 0 37px 37px;
+}
+
+.textContent > .backarrow {
+    margin: 0 -37px -37px;
+}
+
+#about img {
+    height: 20em;
+    border: 2px solid #000;
+    transform: rotate(-5deg);
+    margin-left: 10%;
+}
+
+/* Journey Section */
+
+.flexbox-full {
+    padding-left: 6.5em;
+}
+
+.flexbox-full,
+.graph-nt {
+    display: flex;
+}
+
+.graph {
+    padding: 3em;
+    padding-right: 0em;
+}
+
+.line {
+    padding: 0 30px;
+    border-left: 2px solid gray;
+}
+
+.info-box {
+    position: relative;
+    padding: 2em;
+    transition: all 0.4s;
+    width: 20em;
+}
+
+.info-box::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 23px);
+    top: 5em;
+    background-color: var(--text-color);
+}
+
+.info-box box-icon {
+    position: absolute;
+    right: calc(100% + 3em);
+    top: 4em;
+    padding-right: 2em;
+}
+
+/* Projects Section */
+
+#projects a:hover {
+    color: #8525cf;
+}
+
+#projects h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--text-color)
+}
+
+#projects section {
+    padding: 1em;
+}
+
+.project-group {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20em, 1fr));
+    gap: 1em;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    border: var(--misc-color) 1px solid;
+    padding: 2%;
+    align-items: center;
+}
+
+.project img{
+    max-width: 100%;
+    height: 11em;
+    border: var(--sec-color) 1px solid;
+}
+
+.project i {
+    font-size: 40px;
+}
+
+.tools {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+
+.tools b {
+    font-size: 1.5em;
+    color: var(--misc-color)
+}
+
+.tools img{
+    width: 3em;
+    height: auto;
+    border: none;
+}
+
+/* --- Contact styles --- */
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+}
+
+form label{
+    font-size: 1.5em;
+}
+
+form .input-field input, form textarea {
+    margin-top: 1em;
+    font-size: 1.2em;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.input-fields {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.input-field:first-child {
+    flex: 1;
+    margin-right: 2em;
+}
+
+form textarea {
+    height: 15em;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+
+input[type=submit], input[type=reset] {
+    background-color: var(--sec-color); 
+    color: white; 
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    font-family: "Source Code Pro";
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+    background-color: var(--text-color); 
+}
+
+.socials {
+    display: inline-flex;
+    border: 1px #505050 solid;
+    padding: 0.5em;
+    margin: 0.5em 0 2em;
+    align-self: center;
+}
+
+.social:first-child {
+    padding-right: 5em;
+}
+
+.social {
+    display: flex;
+}
+
+.social p{
+    display: flex;
+    padding-left: 1em;
+}
+
+/* Used with JS */
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
