@@ -4,7 +4,7 @@
     /* Home Page */
     .header {
         font-size: 1.1em;
-        width: 22em;
+        width: 20em;
         text-align: center;
     }
     .header p {
@@ -23,7 +23,7 @@
     #journey:target,
     #projects:target,
     #contact:target {
-        width: 25em;
+        width: 22em;
     }
 
     /* About Section */
@@ -40,7 +40,7 @@
     /* Journey Section */
     .flexbox-full {
         flex-direction: column;
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
     .icons {
@@ -49,8 +49,8 @@
 
     .info-box box-icon {
         position: absolute;
-        right: calc(100% + 3em);
-        top: 3em;
+        right: calc(100% + 2em);
+        top: 2.5em;
         padding-right: 0.5em;
     }
     
